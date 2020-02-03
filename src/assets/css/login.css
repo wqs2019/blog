@@ -1,0 +1,70 @@
+.el-dialog .el-row {
+    padding-bottom: 20px;
+  }
+  .type {
+    font-size: 18px;
+    color: #000;
+    font-family: "Microsoft YaHei";
+    text-align: center;
+    margin-top: 29px;
+  }
+  .split-hr {
+    margin: 17px auto 0;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    position: relative;
+  }
+  .split-txt {
+    color: #bababa;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    padding: 0 6px;
+    background: #fff;
+    margin-top: -16px;
+    margin-left: -61px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+  }
+  .el-button {
+    width: 100% !important;
+  }
+  .register-wrap {
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  .register-wrap a {
+    color: #44708e;
+    text-decoration: none;
+    padding: 10px;
+  }
+  .login-group {
+    width: 90%;
+    height: 35px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .login-group li {
+    width: 35px;
+    height: 35px;
+    line-height: 50px;
+    cursor: pointer;
+  }
+  .weibo {
+    background: url("../../assets/login/weibo.svg") no-repeat;
+  }
+  .qq {
+    background: url("../../assets/login/qq.svg") no-repeat;
+  }
+  .weixin {
+    background: url("../../assets/login/weixin.svg") no-repeat;
+  }
+  .login-instruction {
+    color: #bababa;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    text-align: center;
+    margin-top: 18px;
+  }

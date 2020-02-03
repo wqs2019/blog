@@ -1,0 +1,89 @@
+.el-header, .el-footer {
+  padding: 0;
+}
+
+.el-footer {
+  width: 100%;
+  height: 100px !important;
+}
+
+.el-col {
+  padding-top: 20px;
+}
+
+.person-detail {
+  display: flex;
+  flex-direction: column;
+  color: #555;
+}
+
+.person-detail p {
+  line-height: 30px;
+}
+
+.person-detail strong {
+  font-weight: 700;
+  color: black;
+}
+
+.el-col {
+  padding: 0;
+}
+.el-button{
+  width: 15%;
+}
+.post_btn {
+  float: right;
+}
+
+.post_btn img {
+  cursor: pointer;
+}
+
+.el-textarea {
+  /* padding-top: 20px; */
+  padding-bottom: 20px;
+}
+
+.el-textarea__inner {
+  border: 1px solid #e74851;
+}
+
+.comment-item {
+  padding-bottom: 30px;
+}
+
+.el-avatar {
+  z-index: 999;
+}
+
+.avatar {
+  padding-top: 27px;
+  position: relative;
+}
+
+.avatar p {
+  width: 40px;
+  height: 40px !important;
+  text-indent: -999px;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  height: 0;
+}
+
+.el-drawer img {
+  width: 100px;
+  height: 100px;
+  padding-left: 30px;
+  border: 1px solid red;
+}
+
+.el-drawer .name span{
+  color: #111;
+  font-size: 20px;
+  padding-right: 10px;
+  font-family: "Microsoft YaHei";
+  font-style: normal;
+  letter-spacing: 1px;
+}
