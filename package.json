@@ -13,7 +13,7 @@
     "element-ui": "^2.12.0",
     "font-awesome": "^4.7.0",
     "node-sass": "^4.13.0",
-    "nodemailer": "^6.3.1",
+    "nodemailer": "^6.4.16",
     "reset-css": "^5.0.1",
     "sass-loader": "^8.0.0",
     "vue": "^2.6.10",
