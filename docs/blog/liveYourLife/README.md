@@ -89,4 +89,4 @@ tags:
 
 希望大家都可以对早起上瘾！
 
-![](testProcess/2.gif)
+![](../common/2.gif)

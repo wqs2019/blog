@@ -2,7 +2,10 @@
 home: true
 heroText: 前端小时
 tagline: 一个前端程序员，欢迎关注公众号【前端小时】
-actionText: 查看文章 →
+actions:
+  - text: 快速上手
+    link: /blog/index.html
+    type: primary
 actionLink: /blog/
 features:
 - title: 前端面试题库

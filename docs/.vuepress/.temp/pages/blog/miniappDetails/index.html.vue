@@ -1,0 +1,48 @@
+<template><div><h1 id="小程序开发的一些细节-你有注意吗" tabindex="-1"><a class="header-anchor" href="#小程序开发的一些细节-你有注意吗" aria-hidden="true">#</a> 小程序开发的一些细节，你有注意吗？</h1>
+<blockquote>
+<p>最近的弄的小程序差不多有点东西了，就来写一些关于小程序的感悟吧</p>
+</blockquote>
+<p><img src="@source/blog/common/1.gif" alt=""></p>
+<h2 id="_01-前言" tabindex="-1"><a class="header-anchor" href="#_01-前言" aria-hidden="true">#</a> 01 前言</h2>
+<p>一般来说，我认为小程序是一个没有什么技术含量的东西，特别是现在有了组件库，而且小程序生态不断完善的情况下，只要对着文档慢慢写就好，就是时间的问题。然后这里也不是教大家怎么去写程序之类的，而是本人在经历过后的一些小建议。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/c50c008a-c38f-4033-be1f-5a0a2e7cda0e.png" alt=""></p>
+<h2 id="_02-技术选型" tabindex="-1"><a class="header-anchor" href="#_02-技术选型" aria-hidden="true">#</a> 02 技术选型</h2>
+<p>其实我觉得技术选型是非常重要的，直接关系到你后来的工作复杂度。怎么说呢？因为小程序的开发就是一个注重业务逻辑的过程，它与算法研究类的研发工作不同。小程序的质量高不高，用户体验好不好完全取决于你的页面设计，页面的交互。</p>
+<p>所以我觉得在选型的过程中有几个特别值得注意的：</p>
+<ul>
+<li>组件库支持</li>
+<li>框架生态</li>
+<li>框架语法</li>
+</ul>
+<p>基本上就是这些，首先来说一下第一个关于组件库的支持。</p>
+<h3 id="组件库支持" tabindex="-1"><a class="header-anchor" href="#组件库支持" aria-hidden="true">#</a> 组件库支持</h3>
+<p>现在的<code v-pre>组件库</code>特别多，基本上是可以满足我们日常开发的需要，之前我写了一篇关于《<a href="https://juejin.im/post/5e9f02ff6fb9a03c95800c8d" target="_blank" rel="noopener noreferrer">前端人应该掌握的工具<ExternalLinkIcon/></a>》里面有写到，大家感兴趣的可以去看一下。</p>
+<p>可以说组件就是整个程序的重要部分，因为假如你<code v-pre>自己写的话肯定会花费大量的时间</code>，即使你已经写出来了可能也就是自己能用，兼容性也会有问题。所以关于组件的开发就<code v-pre>不推荐自己造轮子</code>了，我们还没有这样的时间和精力。</p>
+<p>但是我们也不能随便去选择一个组件库，我们必须要<code v-pre>根据小程序的页面设计</code>，详细列出里面所有的元素到底是采用何种方法/组件实现的，你<code v-pre>选择的组件库是否所有都满足</code>。还有一个重要的是，组件库的<code v-pre>社区反馈</code>如何，有没有很多不可避免的BUG在里面。</p>
+<p>这一点自己也深有体会，因为组件的兼容性问题，自己往往会花费几天时间来做<code v-pre>兼容和适配</code>。现在我是选择了<code v-pre>mpvue+vant</code>的形式来写的。设计图上面的navbar是自定义而且是固定顶部的，一开始也没有怎么注意，觉得没有问题。但是，在我切换不同的机型的时候问题就出来了，各种对不齐的情况接踵而来，特别是苹果系列的机型（刘海屏）。</p>
+<p>起初我想过自己去适配一下，但是发现头发一直掉，应该在提醒我不能这么搞了。后面就在github找到了一个可以适配的navbar组件，解决了我的问题。也从侧面说明不能自己造轮子。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/7f90f565-435f-4c69-a228-80257ac51e21.png" alt=""></p>
+<h3 id="框架生态" tabindex="-1"><a class="header-anchor" href="#框架生态" aria-hidden="true">#</a> 框架生态</h3>
+<p>因为最终还是要编译成官方的小程序格式，难免会有一些问题。所以我们选择一个小程序框架的时候也要考虑到这个问题，看<code v-pre>它与官方的区别</code>在哪，有哪一些是不支持的，看一下<code v-pre>社区对它的评价如何</code>。</p>
+<p>基本上我们<code v-pre>选择一些用户反馈比较积极</code>的就好，<code v-pre>不要选一些新兴的框架</code>，因为往往也是坑比较多，而且你有时候发邮件问他们几个世纪都不回你的。如何选择一个比较好的框架呢？可以看文章的最后github仓库，里面有很多关于小程序的资料，也有一些框架的排名和组件库选择。</p>
+<h3 id="框架语法" tabindex="-1"><a class="header-anchor" href="#框架语法" aria-hidden="true">#</a> 框架语法</h3>
+<p>语法部分还不是最主要的，因为<code v-pre>前端的语法</code>都一样，那我说这个的目的其实是说小程序的开发语法与官方的语法有<code v-pre>哪些不兼容</code>的，要注意一下，一般文档都会给出来的。</p>
+<p>目前小程序的开发都可以使用vue语法来编写，可以说是非常方便了，但是如果你不熟悉<code v-pre>小程序的生命周期</code>与<code v-pre>vue的生命周期就</code>可能会有一些问题。我遇到的问题就是怎么合理使用生命周期函数。有时候你的程序可能会报一些奇怪的错误，<code v-pre>比如提示图片加载失败，然后图片又显示正常</code>。其实这就是页面渲染的时候还没有识别到图片的原因，是后面加载的，这就是先后的问题。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/4f335a2e-aea6-494d-967e-d15aff1b39fb.png" alt=""></p>
+<h2 id="_03-开发步骤" tabindex="-1"><a class="header-anchor" href="#_03-开发步骤" aria-hidden="true">#</a> 03 开发步骤</h2>
+<p>前期就是一些架构设计以及技术选型的内容，前期的选择尤为重要，技术选型好，后面你会节省很多时间和工作量。</p>
+<h3 id="代码结构设计" tabindex="-1"><a class="header-anchor" href="#代码结构设计" aria-hidden="true">#</a> 代码结构设计</h3>
+<p>开发步骤也要设计，你要规划一些目录结构，比如存放<code v-pre>组件的</code>、<code v-pre>图片的</code>、<code v-pre>工具类函数的</code>、<code v-pre>页面类</code>的等。虽然说我们的初始化项目都会有相应的目前结构，但是你也要在它的基础上进行稍微的改造。让我们的目前更加清晰。</p>
+<p>一般来说我们就从我提到的<code v-pre>组件</code>、<code v-pre>图片</code>、<code v-pre>工具</code>、<code v-pre>页面</code>几个步骤出发。页面部分我们基本上不用怎么改，因为项目初始化都帮你设计好了。组件部分我们就新建一个组件文件夹，用于存放我们的自定义组件，方便后期的复用。值得注意的是，我们一定要<code v-pre>写好组件</code>，让我们的<code v-pre>复用效率更高</code>，可以通过<code v-pre>传参的形式来控制组件的形态</code>。</p>
+<p>关于图片的存储我的建议就是可以<code v-pre>从功能上来划分</code>，比如tabbar的图片，navbar的图片，其他的图片也是按照自己的功能来进行划分，这样就显得<code v-pre>逻辑结构清晰</code>，后续的<code v-pre>维护</code>更加方便容易。</p>
+<h3 id="项目的配置" tabindex="-1"><a class="header-anchor" href="#项目的配置" aria-hidden="true">#</a> 项目的配置</h3>
+<p>这一方面的话看你的<code v-pre>具体业务需求</code>怎么样，一般来说我们经常都会调用<code v-pre>第三方库函数/接口</code>，如定位等。现在我做的这一个就用到了腾讯地图的第三方接口，这里就不再详细展开。</p>
+<p>我做的时候会出现域名不合法的情况，你需要在<code v-pre>小程序后台进行域名的配置</code>，报错信息都告诉你怎么配置了，把那个域名加上去就好。又或者你的后台请求接口有错误的话一般就是你的接口<code v-pre>域名不是https协议</code>，这就有点麻烦了，调试阶段可以在开发者工具的右上角详情部分，<code v-pre>勾上不检验</code>就好。</p>
+<p>但是如果你要上线的话就需要有https的服务器放置你的接口了。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/7b8e9147-9ee2-4f1b-b473-155285245f80.png" alt=""></p>
+<h2 id="_04、小结" tabindex="-1"><a class="header-anchor" href="#_04、小结" aria-hidden="true">#</a> 04、小结</h2>
+<p>好了，以上就是就本次项目的相关总结，但是项目本身还是没有完善的，我也是在早期的设计上面下了一些功夫，主要还是让自己在后面的开发过程中少一些BUG和错误，方便自己后期的维护。</p>
+<p>其实业务类的小程序更要主要组件的开发和设计，因为很多页面都会公用一个组件，假如你是复制粘贴那也未尝不可，只是维护比较难而已。我们做每一个产品，在必不得已的情况下才会使用一些技巧性的东西，一般来说都会做成一个可伸缩、可维护的产品，也是对自己的要求。</p>
+<p>小程序仓库：https://github.com/justjavac/awesome-wechat-weapp</p>
+<p><img src="@source/blog/common/2.gif" alt=""></p>
+</div></template>
