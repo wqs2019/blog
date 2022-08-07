@@ -25,7 +25,14 @@ module.exports = {
       editLinkText: '帮助我们改善此页面！',
       smoothScroll: true
     },
-    serviceWorker: true // 是否开启 PWA
+    serviceWorker: false, // 是否开启 PWA
+    plugins: [
+      'vuepress-plugin-dehydrate',
+      {
+        // 禁用 SSR
+        noSSR: '*',
+      },
+    ],
   };
 
 
